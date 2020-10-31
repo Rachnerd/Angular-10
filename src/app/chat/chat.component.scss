@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20em;
+  border: 1px solid black;
+}
+
+.chat {
+  flex: 1;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+
+  &-messages {
+    flex: 1;
+    border: 1px solid black;
+  }
+
+  &-form {
+    border: 1px solid black;
+  }
+}
