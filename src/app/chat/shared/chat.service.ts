@@ -9,8 +9,8 @@ export class ChatService {
     return [
       {
         user: {
-          image: '',
-          name: '',
+          image: 'https://www.flaticon.com/svg/static/icons/svg/64/64572.svg',
+          name: 'User1',
         },
         content: 'Hello world',
         createdAt: new Date().toISOString(),
