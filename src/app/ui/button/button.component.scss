@@ -1,0 +1,10 @@
+.ui-button {
+  color: white;
+  background-color: #3c78d8;
+  transition: background-color 200ms ease;
+  border-radius: 4px;
+
+  &:disabled {
+    background-color: lightgray;
+  }
+}

@@ -1,0 +1,9 @@
+<button
+  class="ui-button"
+  type="button"
+  [disabled]="disabled"
+  (click)="clicked.emit($event)"
+>
+  <i *ngIf="icon" class="fa fa-{{ icon }}"></i>
+  <span *ngIf="text">{{ text }}</span>
+</button>

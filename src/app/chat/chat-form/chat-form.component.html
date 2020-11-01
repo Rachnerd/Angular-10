@@ -1,1 +1,9 @@
-<p>chat-form works!</p>
+<form class="form">
+  <ov-input class="form-input" [value]="message" (valueChange)="setMessage($event)"></ov-input>
+  <ov-button
+    class="form-button"
+    [icon]="'play'"
+    [disabled]="message.trim().length === 0"
+    (clicked)="submit()"
+  ></ov-button>
+</form>
