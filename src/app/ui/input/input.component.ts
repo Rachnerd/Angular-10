@@ -13,7 +13,7 @@ export class InputComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onChange(event: Event): void {
+  onInput(event: Event): void {
     const element = event.target as HTMLInputElement;
     this.valueChange.emit(element.value);
   }
