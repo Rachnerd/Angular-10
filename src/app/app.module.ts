@@ -15,12 +15,10 @@ import { ChatComponent } from './chat/chat.component';
     ChatMessagesComponent,
     ChatFormComponent,
     ChatChannelComponent,
-    ChatComponent
+    ChatComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

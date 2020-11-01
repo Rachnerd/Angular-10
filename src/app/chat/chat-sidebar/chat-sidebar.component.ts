@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ov-chat-sidebar',
   templateUrl: './chat-sidebar.component.html',
-  styleUrls: ['./chat-sidebar.component.scss']
+  styleUrls: ['./chat-sidebar.component.scss'],
 })
 export class ChatSidebarComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

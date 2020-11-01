@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ov-chat-channel',
   templateUrl: './chat-channel.component.html',
-  styleUrls: ['./chat-channel.component.scss']
+  styleUrls: ['./chat-channel.component.scss'],
 })
 export class ChatChannelComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
