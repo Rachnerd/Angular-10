@@ -1,1 +1,6 @@
-<p>chat-messages works!</p>
+<ul class="messages">
+  <li class="message" *ngFor="let message of messages">
+    <img [src]="message.user.image" alt="User image" class="profile-image"/>
+    <span class="content">[{{message.createdAt | date: 'HH:mm:ss'}}] {{message.user.name}}: {{ message.content }}</span>
+  </li>
+</ul>

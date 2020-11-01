@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'ov-chat-form',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-form.component.scss'],
 })
 export class ChatFormComponent implements OnInit {
+  @Output()
+  send = new EventEmitter<string>();
+
   message = '';
 
   constructor() {}
@@ -17,6 +20,6 @@ export class ChatFormComponent implements OnInit {
   }
 
   submit(): void {
-    alert(`Message: ${this.message.trim()}`);
+    this.send.emit(this.message);
   }
 }

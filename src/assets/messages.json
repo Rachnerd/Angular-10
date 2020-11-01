@@ -1,0 +1,34 @@
+[
+  {
+    "content": "Hello",
+    "user": {
+      "image": "https://www.flaticon.com/svg/static/icons/svg/64/64572.svg",
+      "name": "User1"
+    },
+    "createdAt": "Sun Nov 01 2020 21:08:26 GMT+0100"
+  },
+  {
+    "content": "World",
+    "user": {
+      "image": "https://www.flaticon.com/svg/static/icons/svg/64/64572.svg",
+      "name": "User1"
+    },
+    "createdAt": "Sun Nov 01 2020 21:08:26 GMT+0100"
+  },
+  {
+    "content": "Hello",
+    "user": {
+      "image": "https://www.flaticon.com/svg/static/icons/svg/64/64572.svg",
+      "name": "User2"
+    },
+    "createdAt": "Sun Nov 01 2020 21:08:26 GMT+0100"
+  },
+  {
+    "content": "World",
+    "user": {
+      "image": "https://www.flaticon.com/svg/static/icons/svg/64/64572.svg",
+      "name": "User1"
+    },
+    "createdAt": "Sun Nov 01 2020 21:08:26 GMT+0100"
+  }
+]

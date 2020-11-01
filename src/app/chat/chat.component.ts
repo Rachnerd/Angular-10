@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatMessage } from './shared/chat.model';
+import { ChatService } from './shared/chat.service';
 
 @Component({
   selector: 'ov-chat',
@@ -6,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat.component.scss'],
 })
 export class ChatComponent implements OnInit {
-  constructor() {}
+  messages: ChatMessage[];
 
-  ngOnInit(): void {}
+  constructor(private chatService: ChatService) {}
+
+  ngOnInit(): void {
+    this.messages = this.chatService.getMessages();
+  }
+
+  sendMessage(content: string): void {
+    this.chatService.sendMessage(content);
+  }
 }

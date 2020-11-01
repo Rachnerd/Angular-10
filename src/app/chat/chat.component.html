@@ -2,6 +2,6 @@
   <ov-chat-channel></ov-chat-channel>
 </ov-sidebar>
 <main class="chat">
-  <ov-chat-messages class="chat-messages"></ov-chat-messages>
-  <ov-chat-form class="chat-form"></ov-chat-form>
+  <ov-chat-messages [messages]="messages" class="chat-messages"></ov-chat-messages>
+  <ov-chat-form (send)="sendMessage($event)" class="chat-form"></ov-chat-form>
 </main>
