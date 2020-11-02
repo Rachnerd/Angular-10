@@ -15,9 +15,7 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
     this.messages$ = this.chatService.messages$;
-    setTimeout(() => {
-      this.chatService.getMessages();
-    });
+    this.chatService.getMessages();
   }
 
   sendMessage(content: string): void {
