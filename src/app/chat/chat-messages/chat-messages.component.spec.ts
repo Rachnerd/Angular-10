@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChatMessagesComponent } from './chat-messages.component';
+import { UiModule } from '../../ui/ui.module';
 
 describe('ChatMessagesComponent', () => {
   let component: ChatMessagesComponent;
@@ -9,6 +10,7 @@ describe('ChatMessagesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ChatMessagesComponent],
+      imports: [UiModule],
     }).compileComponents();
   });
 
