@@ -10,15 +10,22 @@ export class ChatService {
   messages$: Observable<ChatMessage[]>;
   private messagesSubject: Subject<ChatMessage[]>;
 
+  error$: Observable<Error>;
+  private errorSubject: Subject<Error>;
+
   constructor(private httpClient: HttpClient) {
     this.messagesSubject = new Subject();
     this.messages$ = this.messagesSubject.asObservable();
+
+    this.errorSubject = new Subject();
+    this.error$ = this.errorSubject.asObservable();
   }
 
   getMessages(): void {
-    this.httpClient.get('./assets/messages.json').subscribe((data) => {
-      this.messagesSubject.next(data as ChatMessage[]);
-    });
+    this.httpClient.get('./assets/messages.json').subscribe(
+      (data) => this.messagesSubject.next(data as ChatMessage[]),
+      (error) => this.errorSubject.next(error)
+    );
   }
 
   sendMessage(message: string): void {
