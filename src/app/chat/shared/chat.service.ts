@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ChatMessage } from './chat.model';
 import { Observable, Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -9,26 +10,18 @@ export class ChatService {
   messages$: Observable<ChatMessage[]>;
   private messagesSubject: Subject<ChatMessage[]>;
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
     this.messagesSubject = new Subject();
     this.messages$ = this.messagesSubject.asObservable();
   }
 
   getMessages(): void {
-    this.messagesSubject.next([
-      {
-        user: {
-          image: 'https://www.flaticon.com/svg/static/icons/svg/64/64572.svg',
-          name: 'User1',
-        },
-        content: 'Hello world',
-        createdAt: new Date().toISOString(),
-      },
-    ]);
+    this.httpClient.get('./assets/messages.json').subscribe((data) => {
+      this.messagesSubject.next(data as ChatMessage[]);
+    });
   }
 
   sendMessage(message: string): void {
-    // Do something
     console.log(`Send message: ${message}`);
   }
 }
