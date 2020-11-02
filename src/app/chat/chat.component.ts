@@ -18,7 +18,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.messages$ = this.chatService.messages$;
     this.errorSubscription = this.chatService.error$.subscribe((error) =>
-      alert('Failed to fetch messages!')
+      console.error('Failed to fetch messages!')
     );
 
     this.chatService.getMessages();
