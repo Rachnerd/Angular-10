@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+
+  &-item {
+    padding: 0.4em;
+  }
+}
