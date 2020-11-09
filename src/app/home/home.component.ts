@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/shared/auth.service';
+import { Observable } from 'rxjs';
+import { User } from '../auth/shared/auth.model';
 
 @Component({
   selector: 'ov-home',
@@ -6,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  user$: Observable<User>;
+  constructor(private authService: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.user$ = this.authService.user$;
+  }
 }

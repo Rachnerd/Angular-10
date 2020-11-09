@@ -1,2 +1,4 @@
-<ov-navigation [menu]="navigationMenu"></ov-navigation>
-<router-outlet></router-outlet>
+<ov-navigation [menu]="navigationMenu$ | async"></ov-navigation>
+<div class="router-outlet-container">
+  <router-outlet></router-outlet>
+</div>

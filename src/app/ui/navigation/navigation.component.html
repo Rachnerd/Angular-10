@@ -1,5 +1,9 @@
-<ul class="menu">
-  <li class="menu-item" *ngFor="let item of menu">
-    <a [routerLink]="item.route">{{ item.title }}</a>
-  </li>
-</ul>
+<div
+  *ngFor="let item of menu"
+  class="menu-item"
+  [routerLink]="item.route"
+  [routerLinkActive]="['active']"
+  [routerLinkActiveOptions]="{ exact: item.route === '' || item.route === './' }"
+>
+  <span>{{ item.title }}</span>
+</div>

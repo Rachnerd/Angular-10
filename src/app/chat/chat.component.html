@@ -1,7 +1,11 @@
 <ov-sidebar class="sidebar">
-  <ov-chat-channel></ov-chat-channel>
+  <ov-navigation [menu]="navigation"></ov-navigation>
+  <router-outlet></router-outlet>
 </ov-sidebar>
 <main class="chat">
-  <ov-chat-messages [messages]="messages$ | async" class="chat-messages"></ov-chat-messages>
+  <ov-chat-messages
+    [messages]="messages$ | async"
+    class="chat-messages"
+  ></ov-chat-messages>
   <ov-chat-form (send)="sendMessage($event)" class="chat-form"></ov-chat-form>
 </main>

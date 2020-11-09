@@ -1,10 +1,7 @@
+import { LoggedInUser } from '../../auth/shared/auth.model';
+
 export interface ChatMessage {
   content: string;
-  user: User;
+  user: Omit<LoggedInUser, 'token' | 'type'>;
   createdAt: string;
-}
-
-export interface User {
-  name: string;
-  image: string;
 }

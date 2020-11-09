@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [],
@@ -15,7 +14,8 @@ import { ChatComponent } from './chat/chat.component';
       },
       {
         path: 'chat',
-        component: ChatComponent,
+        loadChildren: () =>
+          import('./chat/chat.module').then((m) => m.ChatModule),
       },
     ]),
   ],

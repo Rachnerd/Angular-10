@@ -3,3 +3,8 @@
   flex-direction: column;
   height: 100%;
 }
+
+.router-outlet-container {
+  flex: 1;
+  padding: 0.4em;
+}

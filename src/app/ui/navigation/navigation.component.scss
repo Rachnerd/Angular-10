@@ -1,12 +1,18 @@
 :host {
-  display: block;
-  width: 100%;
+  display: flex;
 }
 
-.menu {
-  display: flex;
+.menu-item {
+  text-decoration: none;
+  padding: 0.4em;
+  color: black;
+  cursor: pointer;
+  font-size: 1.2em;
+  border: 1px solid black;
 
-  &-item {
-    padding: 0.4em;
+  &.active {
+    cursor: auto;
+    background-color: black;
+    color: white;
   }
 }

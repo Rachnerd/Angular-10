@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ChatMessage } from './shared/chat.model';
 import { ChatService } from './shared/chat.service';
 import { Observable, Subscription } from 'rxjs';
+import { NavigationMenu } from '../ui/navigation/navigation.component';
 
 @Component({
   selector: 'ov-chat',
@@ -10,6 +11,17 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class ChatComponent implements OnInit, OnDestroy {
   messages$: Observable<ChatMessage[]>;
+
+  navigation: NavigationMenu[] = [
+    {
+      route: './',
+      title: 'Channel',
+    },
+    {
+      route: './user',
+      title: 'User',
+    },
+  ];
 
   private errorSubscription: Subscription;
 
