@@ -23,7 +23,7 @@ import {
 } from 'rxjs/operators';
 import { fakeAsync, tick as _tick } from '@angular/core/testing';
 
-fdescribe('RxJS', () => {
+describe('RxJS', () => {
   /**
    * The following spies will act like subscribe handlers:
    * subject.subscribe(

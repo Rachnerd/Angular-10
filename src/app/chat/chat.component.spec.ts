@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 import { ChatModule } from './chat.module';
 import { ChatMessage } from './shared/chat.model';
 import createSpy = jasmine.createSpy;
+import { RouterModule } from '@angular/router';
 
 describe('ChatComponent', () => {
   let component: ChatComponent;
@@ -21,7 +22,7 @@ describe('ChatComponent', () => {
     };
 
     await TestBed.configureTestingModule({
-      imports: [ChatModule],
+      imports: [RouterModule.forRoot([]), ChatModule],
       providers: [
         {
           provide: ChatService,
