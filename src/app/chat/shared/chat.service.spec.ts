@@ -16,7 +16,7 @@ describe('ChatService', () => {
     {
       content: 'content',
       user: {
-        name: 'name',
+        username: 'name',
         image: 'image',
       },
       createdAt: new Date().toISOString(),

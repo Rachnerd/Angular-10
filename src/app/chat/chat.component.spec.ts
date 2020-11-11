@@ -47,7 +47,7 @@ describe('ChatComponent', () => {
         createdAt: new Date().toISOString(),
         content: 'content',
         user: {
-          name: 'name',
+          username: 'name',
           image: 'image',
         },
       },
@@ -58,7 +58,7 @@ describe('ChatComponent', () => {
 
     const {
       content,
-      user: { name, image },
+      user: { username, image },
     } = MESSAGES_MOCK[0];
 
     const compiled: HTMLElement = fixture.nativeElement;
@@ -69,7 +69,7 @@ describe('ChatComponent', () => {
 
     expect(
       compiled.querySelector('.chat-messages .content').textContent
-    ).toContain(name);
+    ).toContain(username);
 
     expect(
       compiled
